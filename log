@@ -801,3 +801,13 @@ arraylist.c:90:12: error: invalid use of void expression
 cc1: all warnings being treated as errors
 Compilation failed
 bcaebcf
+Fri 31 Mar 2023 07:36:28 PM UTC: 
+ arraylist.c | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+arraylist.c: In function ‘get’:
+arraylist.c:83:11: error: expected expression before ‘)’ token
+   83 |     while()
+      |           ^
+Compilation failed
+2530d8f
