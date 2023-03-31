@@ -259,3 +259,37 @@ arraylist.c:36:51: error: invalid operands to binary * (have ‘void *’ and �
 cc1: all warnings being treated as errors
 Compilation failed
 d4de38e
+Fri 31 Mar 2023 11:51:26 AM UTC: 
+ arraylist.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+arraylist.c: In function ‘append’:
+arraylist.c:24:12: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+   24 |     return NULL;
+      |            ^~~~
+arraylist.c:21:6: note: declared here
+   21 | void append(ArrayList * l, void * data){
+      |      ^~~~~~
+arraylist.c:36:38: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+   36 |     l->data = (void*)realloc((l->data, l->capacity)*sizeof(void));
+      |                                      ^
+arraylist.c:36:52: error: passing argument 1 of ‘realloc’ makes pointer from integer without a cast [-Werror=int-conversion]
+   36 |     l->data = (void*)realloc((l->data, l->capacity)*sizeof(void));
+      |                              ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+      |                                                    |
+      |                                                    long unsigned int
+In file included from test.c:2:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/stdlib.h:551:29: note: expected ‘void *’ but argument is of type ‘long unsigned int’
+  551 | extern void *realloc (void *__ptr, size_t __size)
+      |                       ~~~~~~^~~~~
+In file included from test.c:5:
+arraylist.c:36:22: error: too few arguments to function ‘realloc’
+   36 |     l->data = (void*)realloc((l->data, l->capacity)*sizeof(void));
+      |                      ^~~~~~~
+In file included from test.c:2:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/stdlib.h:551:14: note: declared here
+  551 | extern void *realloc (void *__ptr, size_t __size)
+      |              ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+a20112c
