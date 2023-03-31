@@ -718,3 +718,9 @@ arraylist.c:74:9: error: ‘aux’ may be used uninitialized in this function [-
 cc1: all warnings being treated as errors
 Compilation failed
 e14de47
+Fri 31 Mar 2023 07:19:13 PM UTC: 
+ arraylist.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  6|2
+total_score: 40/70
+1a8ed0c
