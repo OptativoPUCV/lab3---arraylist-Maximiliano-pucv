@@ -23,12 +23,12 @@ void append(ArrayList * l, void * data){
   {
     return;
   }
-  if(l->size < l->capacity)
+  /*if(l->size < l->capacity)
   {
     l->data[l->size] = data;
     l->size++;
     
-  }
+  }*/
   if(l->size == l->capacity)
   {
   
