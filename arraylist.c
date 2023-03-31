@@ -64,7 +64,7 @@ void push(ArrayList * l, void * data, int i){
 }
 
 void* pop(ArrayList * l, int i){
-  void aux = l->data[i];
+  void *aux = l->data[i];
     return aux;
 }
 
