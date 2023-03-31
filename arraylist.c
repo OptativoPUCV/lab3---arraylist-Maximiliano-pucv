@@ -77,16 +77,9 @@ void* get(ArrayList * l, int i){
   {
     return NULL;
   }
-  if(i < 0 && fabs(i) < l->size )
-  {
-      aux = l->data[l->size + i];
-    return aux;
-  }
-  for(int k = 0; k<i;k++)
-    {
-      aux = l->data[k];
-    }
-    return aux;
+  
+  
+    return l->data[i];
 }
 
 int get_size(ArrayList * l){

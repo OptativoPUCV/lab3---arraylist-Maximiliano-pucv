@@ -846,3 +846,14 @@ Fri 31 Mar 2023 07:43:25 PM UTC:
  tests:  6|2
 total_score: 40/70
 852c98a
+Fri 31 Mar 2023 07:48:23 PM UTC: 
+ arraylist.c | 13 +++----------
+ 1 file changed, 3 insertions(+), 10 deletions(-)
+In file included from test.c:5:
+arraylist.c: In function ‘get’:
+arraylist.c:75:9: error: unused variable ‘aux’ [-Werror=unused-variable]
+   75 |   void *aux = l->data;
+      |         ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+bba2829
