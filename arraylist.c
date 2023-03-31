@@ -78,13 +78,13 @@ void* get(ArrayList * l, int i){
   }
   if(i < 0)
   {
-    for(int j = l->size; j>=i ; j--)
+    for(int j = l->size; j>i ; j--)
       {
         aux = l->data[j];
       }
     return aux;
   }
-  for(int k = 0; k<=i;k++)
+  for(int k = 0; k<i;k++)
     {
       aux = l->data[k];
     }
