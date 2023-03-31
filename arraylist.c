@@ -25,8 +25,8 @@ void append(ArrayList * l, void * data){
   }
   if(l->size < l->capacity)
   {
-    l->size++;
     l->data[l->size] = data;
+    l->size++;
     
   }
   if(l->size == l->capacity)
