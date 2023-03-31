@@ -79,8 +79,7 @@ void* get(ArrayList * l, int i){
   }
   if(i < 0 )
   {
-    int j = l->size;
-    while()
+    for(int j = l->data ; j>i ; j--)
       {
         aux = l->data[j];
       }
