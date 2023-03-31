@@ -822,3 +822,9 @@ arraylist.c:82:17: error: initialization of ‘int’ from ‘void **’ makes i
 cc1: all warnings being treated as errors
 Compilation failed
 f9527e4
+Fri 31 Mar 2023 07:37:22 PM UTC: 
+ arraylist.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  6|2
+total_score: 40/70
+73f066c
