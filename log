@@ -632,3 +632,29 @@ arraylist.c:89:12: error: invalid use of void expression
 cc1: all warnings being treated as errors
 Compilation failed
 3ed7c56
+Fri 31 Mar 2023 07:10:25 PM UTC: 
+ arraylist.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+arraylist.c: In function ‘get’:
+arraylist.c:74:8: error: variable or field ‘aux’ declared void
+   74 |   void aux = l->data;
+      |        ^~~
+arraylist.c:74:14: error: initialization of ‘int’ from ‘void **’ makes integer from pointer without a cast [-Werror=int-conversion]
+   74 |   void aux = l->data;
+      |              ^
+arraylist.c:83:13: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   83 |         aux = l->data[j];
+      |             ^
+arraylist.c:85:12: error: returning ‘int’ from a function with return type ‘void *’ makes pointer from integer without a cast [-Werror=int-conversion]
+   85 |     return aux;
+      |            ^~~
+arraylist.c:89:11: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   89 |       aux = l->data[k];
+      |           ^
+arraylist.c:91:12: error: returning ‘int’ from a function with return type ‘void *’ makes pointer from integer without a cast [-Werror=int-conversion]
+   91 |     return aux;
+      |            ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+6d5cd86
