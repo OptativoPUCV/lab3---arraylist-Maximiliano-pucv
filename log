@@ -240,3 +240,22 @@ arraylist.c:36:44: error: invalid operands to binary * (have ‘void *’ and �
 cc1: all warnings being treated as errors
 Compilation failed
 621be92
+Fri 31 Mar 2023 11:50:34 AM UTC: 
+ arraylist.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+arraylist.c: In function ‘append’:
+arraylist.c:24:12: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+   24 |     return NULL;
+      |            ^~~~
+arraylist.c:21:6: note: declared here
+   21 | void append(ArrayList * l, void * data){
+      |      ^~~~~~
+arraylist.c:36:51: error: invalid operands to binary * (have ‘void *’ and ‘long unsigned int’)
+   36 |     l->data = (void*)realloc(l->data, l->capacity)*sizeof(void);
+      |               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+      |               |
+      |               void *
+cc1: all warnings being treated as errors
+Compilation failed
+d4de38e
