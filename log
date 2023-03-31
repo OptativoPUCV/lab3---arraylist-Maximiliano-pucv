@@ -127,3 +127,29 @@ In file included from test.c:2:
 cc1: all warnings being treated as errors
 Compilation failed
 9b802a4
+Fri 31 Mar 2023 11:48:14 AM UTC: 
+ arraylist.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+arraylist.c: In function ‘append’:
+arraylist.c:24:12: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+   24 |     return NULL;
+      |            ^~~~
+arraylist.c:21:6: note: declared here
+   21 | void append(ArrayList * l, void * data){
+      |      ^~~~~~
+arraylist.c:36:40: error: invalid operands to binary * (have ‘void **’ and ‘int’)
+   36 |     l->data = (void*)realloc(((l->data)*l->capacity)*sizeof(void));
+      |                               ~~~~~~~~~^~~~~~~~~~~~
+      |                                 |        |
+      |                                 void **  int
+arraylist.c:36:22: error: too few arguments to function ‘realloc’
+   36 |     l->data = (void*)realloc(((l->data)*l->capacity)*sizeof(void));
+      |                      ^~~~~~~
+In file included from test.c:2:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/stdlib.h:551:14: note: declared here
+  551 | extern void *realloc (void *__ptr, size_t __size)
+      |              ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+fb59ec7
