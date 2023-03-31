@@ -79,7 +79,7 @@ void* get(ArrayList * l, int i){
   }
   if(i < 0 )
   {
-        aux = l->data[l->size - i];
+      aux = l->data[l->size + i];
     return aux;
   }
   for(int k = 0; k<i;k++)
