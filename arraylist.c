@@ -82,13 +82,13 @@ void* get(ArrayList * l, int i){
       {
         aux = l->data[j];
       }
-    return aux;
+    return *aux;
   }
   for(int k = 0; k<i;k++)
     {
       aux = l->data[k];
     }
-    return aux;
+    return *aux;
 }
 
 int get_size(ArrayList * l){

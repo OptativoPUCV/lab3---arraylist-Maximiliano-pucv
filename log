@@ -664,3 +664,22 @@ Fri 31 Mar 2023 07:10:38 PM UTC:
  tests:  5|3
 total_score: 30/70
 d8e1884
+Fri 31 Mar 2023 07:10:50 PM UTC: 
+ arraylist.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+arraylist.c: In function ‘get’:
+arraylist.c:85:12: error: dereferencing ‘void *’ pointer [-Werror]
+   85 |     return *aux;
+      |            ^~~~
+arraylist.c:85:12: error: void value not ignored as it ought to be
+arraylist.c:91:12: error: dereferencing ‘void *’ pointer [-Werror]
+   91 |     return *aux;
+      |            ^~~~
+arraylist.c:91:12: error: void value not ignored as it ought to be
+arraylist.c:92:1: error: control reaches end of non-void function [-Werror=return-type]
+   92 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+f35ac83
