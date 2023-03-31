@@ -78,3 +78,14 @@ arraylist.c:19:36: error: ‘*aux.capacity’ may be used uninitialized [-Werror
 cc1: all warnings being treated as errors
 Compilation failed
 c8fd35a
+Fri 31 Mar 2023 11:27:23 AM UTC: 
+ arraylist.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+arraylist.c: In function ‘createList’:
+arraylist.c:19:36: error: ‘*aux.data’ may be used uninitialized [-Werror=maybe-uninitialized]
+   19 |   void **datos = (void*)realloc(aux->data, sizeof(void));
+      |                                 ~~~^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+2d29e02
