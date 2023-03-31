@@ -16,7 +16,7 @@ ArrayList *createList(void) {
   {
     return NULL;
   }
-  void **datos = (void*)malloc(sizeof(void));
+  void **datos = (void*)realloc(capacity * sizeof(void));
   if(datos == NULL)
   {
     return NULL;

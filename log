@@ -14,3 +14,21 @@ Fri 31 Mar 2023 11:25:16 AM UTC:
  tests:  0|6
 total_score: 0/70
 b5ce2f3
+Fri 31 Mar 2023 11:26:17 AM UTC: 
+ arraylist.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+arraylist.c: In function ‘createList’:
+arraylist.c:19:33: error: ‘capacity’ undeclared (first use in this function)
+   19 |   void **datos = (void*)realloc(capacity * sizeof(void));
+      |                                 ^~~~~~~~
+arraylist.c:19:33: note: each undeclared identifier is reported only once for each function it appears in
+arraylist.c:19:25: error: too few arguments to function ‘realloc’
+   19 |   void **datos = (void*)realloc(capacity * sizeof(void));
+      |                         ^~~~~~~
+In file included from test.c:2:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/stdlib.h:551:14: note: declared here
+  551 | extern void *realloc (void *__ptr, size_t __size)
+      |              ^~~~~~~
+Compilation failed
+09317b8
