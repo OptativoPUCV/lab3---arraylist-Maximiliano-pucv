@@ -79,17 +79,17 @@ void* get(ArrayList * l, int i){
   }
   if(i < 0 )
   {
-    for(int j = l->size; j>0 ; j--)
+    while(int j = l->size; j>i ; j--)
       {
-        aux = l->data[j];
+        *aux = l->data[j];
       }
-    return aux;
+    return *aux;
   }
   for(int k = 0; k<i;k++)
     {
-      aux = l->data[k];
+      *aux = l->data[k];
     }
-    return aux;
+    return *aux;
 }
 
 int get_size(ArrayList * l){

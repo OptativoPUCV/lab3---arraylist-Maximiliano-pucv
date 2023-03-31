@@ -736,3 +736,41 @@ Fri 31 Mar 2023 07:23:43 PM UTC:
  tests:  6|2
 total_score: 40/70
 4298643
+Fri 31 Mar 2023 07:32:05 PM UTC: 
+ arraylist.c | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+In file included from test.c:5:
+arraylist.c: In function ‘get’:
+arraylist.c:82:11: error: expected expression before ‘int’
+   82 |     while(int j = l->size; j>i ; j--)
+      |           ^~~
+arraylist.c:84:9: error: dereferencing ‘void *’ pointer [-Werror]
+   84 |         *aux = l->data[j];
+      |         ^~~~
+arraylist.c:84:24: error: ‘j’ undeclared (first use in this function)
+   84 |         *aux = l->data[j];
+      |                        ^
+arraylist.c:84:24: note: each undeclared identifier is reported only once for each function it appears in
+arraylist.c:84:14: error: invalid use of void expression
+   84 |         *aux = l->data[j];
+      |              ^
+arraylist.c:86:12: error: dereferencing ‘void *’ pointer [-Werror]
+   86 |     return *aux;
+      |            ^~~~
+arraylist.c:86:12: error: void value not ignored as it ought to be
+arraylist.c:90:7: error: dereferencing ‘void *’ pointer [-Werror]
+   90 |       *aux = l->data[k];
+      |       ^~~~
+arraylist.c:90:12: error: invalid use of void expression
+   90 |       *aux = l->data[k];
+      |            ^
+arraylist.c:92:12: error: dereferencing ‘void *’ pointer [-Werror]
+   92 |     return *aux;
+      |            ^~~~
+arraylist.c:92:12: error: void value not ignored as it ought to be
+arraylist.c:93:1: error: control reaches end of non-void function [-Werror=return-type]
+   93 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+00b40dd
