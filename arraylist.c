@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
+#include <math.h>
 #include "arraylist.h"
 
 //normal array
@@ -76,9 +77,9 @@ void* get(ArrayList * l, int i){
   {
     return NULL;
   }
-  if(i < 0)
+  if(i < 0 && fabs(i) < l->size)
   {
-    for(int j = l->size; j>i ; j--)
+    for(int j = l->size; j>fabs(i) ; j--)
       {
         aux = l->data[j];
       }
