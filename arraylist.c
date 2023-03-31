@@ -52,8 +52,7 @@ void push(ArrayList * l, void * data, int i){
     l->size++;
     l->capacity*=2;
   }
-  else
-  {
+  
     for(int j = l->size; j>i;j--)
       {
   
@@ -62,7 +61,6 @@ void push(ArrayList * l, void * data, int i){
       }
     l->data[i]=data;
     l->size++;
-  }
 
 }
 
