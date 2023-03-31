@@ -612,3 +612,23 @@ Fri 31 Mar 2023 07:07:41 PM UTC:
  tests:  5|3
 total_score: 30/70
 c7c2c26
+Fri 31 Mar 2023 07:10:14 PM UTC: 
+ arraylist.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+arraylist.c: In function ‘get’:
+arraylist.c:83:9: error: dereferencing ‘void *’ pointer [-Werror]
+   83 |         *aux = l->data[j];
+      |         ^~~~
+arraylist.c:83:14: error: invalid use of void expression
+   83 |         *aux = l->data[j];
+      |              ^
+arraylist.c:89:7: error: dereferencing ‘void *’ pointer [-Werror]
+   89 |       *aux = l->data[k];
+      |       ^~~~
+arraylist.c:89:12: error: invalid use of void expression
+   89 |       *aux = l->data[k];
+      |            ^
+cc1: all warnings being treated as errors
+Compilation failed
+3ed7c56
