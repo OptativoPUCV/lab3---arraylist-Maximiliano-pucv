@@ -89,3 +89,9 @@ arraylist.c:19:36: error: ‘*aux.data’ may be used uninitialized [-Werror=may
 cc1: all warnings being treated as errors
 Compilation failed
 2d29e02
+Fri 31 Mar 2023 11:31:28 AM UTC: 
+ arraylist.c | 12 +++---------
+ 1 file changed, 3 insertions(+), 9 deletions(-)
+ tests:  0|6
+total_score: 0/70
+b6c59cb
