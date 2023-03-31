@@ -774,3 +774,30 @@ arraylist.c:93:1: error: control reaches end of non-void function [-Werror=retur
 cc1: all warnings being treated as errors
 Compilation failed
 00b40dd
+Fri 31 Mar 2023 07:32:15 PM UTC: 
+ arraylist.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+arraylist.c: In function ‘get’:
+arraylist.c:82:11: error: expected expression before ‘int’
+   82 |     while(int j = l->size; j>i ; j--)
+      |           ^~~
+arraylist.c:84:9: error: dereferencing ‘void *’ pointer [-Werror]
+   84 |         *aux = l->data[j];
+      |         ^~~~
+arraylist.c:84:24: error: ‘j’ undeclared (first use in this function)
+   84 |         *aux = l->data[j];
+      |                        ^
+arraylist.c:84:24: note: each undeclared identifier is reported only once for each function it appears in
+arraylist.c:84:14: error: invalid use of void expression
+   84 |         *aux = l->data[j];
+      |              ^
+arraylist.c:90:7: error: dereferencing ‘void *’ pointer [-Werror]
+   90 |       *aux = l->data[k];
+      |       ^~~~
+arraylist.c:90:12: error: invalid use of void expression
+   90 |       *aux = l->data[k];
+      |            ^
+cc1: all warnings being treated as errors
+Compilation failed
+bcaebcf
