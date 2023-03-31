@@ -77,7 +77,7 @@ void* get(ArrayList * l, int i){
   {
     return NULL;
   }
-  if(i < 0 )
+  if(i < 0 && fabs(i) < l->size )
   {
       aux = l->data[l->size + i];
     return aux;
